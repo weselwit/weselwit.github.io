@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="EGG" content="Giulia Marcora" />
+	<title>EGG</title>
+	<style type="text/css">
+		html{
+			height:100%;
+		}
+		body{
+			background-color: rgb(235,235,235);
+		}
+		canvas{
+			position:absolute;
+			margin-left: -200px;
+			margin-top: -200px;
+			top: 50%;
+		}
+		#sx {
+			left: calc(50% - 220px);
+		}
+		#dx {
+			left: calc(50% + 220px);
+		}
+	</style>
+</head>
+<body>
+	<canvas id="sx" width=400 height=400></canvas>
+	<canvas id="dx" width=400 height=400></canvas>
+	<script type="module">
+
+		import Sequencer from './js/sequencer.min.js';
+
+		Sequencer.make({
+			canvas       	 : document.querySelector("#sx"),
+			from         	 : "img/uovo_1/0000.jpg",
+			to           	 : "img/uovo_1/0215.jpg",
+			direction        : "x",
+			playMode         : "hover",
+			loop         	 : "loop",
+		})
+		Sequencer.make({
+			canvas       	 : document.querySelector("#dx"),
+			from         	 : "img/uovo_2/Video_22-05-15_20-08-25000.jpg",
+			to           	 : "img/uovo_2/Video_22-05-15_20-08-25153.jpg",
+			direction        : "-x",
+			playMode         : "hover",
+			loop         	 : "loop",
+		})
+
+	</script>
+</body>
+</html>
